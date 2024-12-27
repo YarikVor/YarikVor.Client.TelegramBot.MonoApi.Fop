@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FireSharp" Version="2.0.4" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-rc.2.24473.5" />
+      <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+      <PackageReference Include="Telegram.Bot" Version="22.0.2" />
+      <PackageReference Include="YarikVor.Api.Monobank.PersonalClient" Version="0.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Configurations\UserInfoConfig.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
